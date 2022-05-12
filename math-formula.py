@@ -14,7 +14,7 @@ def cone(r,h):
 	print(a)
 
 def cylinder_sa(r,h):
-    a = (2 * h * r *pi)+(pi * (r ** 2))
+    a = ((2 * r * pi)* h)+(2 * pi * (r ** 2))
     print(a)
 
 def cone_sa(r,l):
