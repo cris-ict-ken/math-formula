@@ -4,7 +4,8 @@ cmd_type = input('''What type of formula you wanna use?
 cmd = input('''What formula you wanna use? 
  1 cylinder
  2 cone
- 3 sphere\n''')
+ 3 sphere
+ TO EXIT PROGRAM JUST TYPE ZERO:\n''')
 pi = 3.14
 
 def sphere(r):
@@ -32,28 +33,48 @@ def sphere_sa(r):
     print(a)
 
 if cmd_type == "volume":
+    r = 1
     if cmd == "sphere":
-	    r = float(input("Enter the radius:\n"))
-	    sphere(r)
+        while r > 0:
+            r = float(input("Enter the radius:\n"))
+            if r == 0:
+                break
+            sphere(r)
     elif cmd == "cylinder":
-	    r = float(input("Enter the radius:\n"))
-	    h = float(input("Enter the height:\n"))
-	    cylinder(r,h)
+        while r > 0:
+	        r = float(input("Enter the radius:\n"))
+	        h = float(input("Enter the height:\n"))
+            if r == 0:
+                break
+	        cylinder(r,h)
     elif cmd == "cone":
-	    r = float(input("Enter the radius:\n"))
-	    h = float(input("Enter the height:\n"))
-	    cone(r,h)
+        while r > 0:
+	        r = float(input("Enter the radius:\n"))
+	        h = float(input("Enter the height:\n"))
+            if r == 0:
+                break
+	        cone(r,h)
 elif cmd_type == "surface area":
+    r = 1
     if cmd == "cylinder":
-        r = float(input("Enter the radius:\n"))
-        h = float(input("Enter the height:\n"))
-        cylinder_sa(r,h)
+        while r > 0:
+            r = float(input("Enter the radius:\n"))
+            h = float(input("Enter the height:\n"))
+            if r == 0:
+                break
+            cylinder_sa(r,h)
     elif cmd == "cone":
-        r = float(input("Enter the radius:\n"))
-        l = float(input("Enter the slant height:\n"))
-        cone_sa(r,l)
+        while r > 0:
+            r = float(input("Enter the radius:\n"))
+            l = float(input("Enter the slant height:\n"))
+            if r == 0:
+                break
+            cone_sa(r,l)
     elif cmd == "sphere":
-        r = float(input("Enter the radius\n"))
-        sphere_sa(r)
+        while r > 0:
+            r = float(input("Enter the radius\n"))
+            if r == 0:
+                break
+            sphere_sa(r)
 else:
 	print("An error had occur pls make sure it all lowercase or spell correctly, Thanks - Monke")
