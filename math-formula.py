@@ -32,49 +32,49 @@ def sphere_sa(r):
     a = ((r ** 2 ) * pi * 4)
     print(a)
 
-if cmd_type == "volume":
+if cmd_type == "volume" or cmd_type == "1":
     r = 1
-    if cmd == "sphere":
+    if cmd == "sphere" or cmd == "3":
         while r > 0:
             r = float(input("Enter the radius:\n"))
             if r == 0:
                 break
             sphere(r)
-    elif cmd == "cylinder":
+    elif cmd == "cylinder" or cmd == "1":
         while r > 0:
             r = float(input("Enter the radius:\n"))
             h = float(input("Enter the height:\n"))
-            if r == 0:
+            if r == 0 or h == 0:
                 break
             cylinder(r,h)
-    elif cmd == "cone":
+    elif cmd == "cone" or cmd == "2":
         while r > 0:
             r = float(input("Enter the radius:\n"))
             h = float(input("Enter the height:\n"))
-            if r == 0:
+            if r == 0 or h == 0:
                 break
             cone(r,h)
-elif cmd_type == "surface area":
+elif cmd_type == "surface area" or cmd_type == "2":
     r = 1
-    if cmd == "cylinder":
+    if cmd == "cylinder" or cmd == "1":
         while r > 0:
             r = float(input("Enter the radius:\n"))
             h = float(input("Enter the height:\n"))
-            if r == 0:
+            if r == 0 or h == 0:
                 break
             cylinder_sa(r,h)
-    elif cmd == "cone":
+    elif cmd == "cone" or cmd == "2":
         while r > 0:
             r = float(input("Enter the radius:\n"))
             l = float(input("Enter the slant height:\n"))
-            if r == 0:
+            if r == 0 or l == 0:
                 break
             cone_sa(r,l)
-    elif cmd == "sphere":
+    elif cmd == "sphere" or cmd == "3":
         while r > 0:
             r = float(input("Enter the radius\n"))
             if r == 0:
                 break
             sphere_sa(r)
 else:
-	print("An error had occur pls make sure it all lowercase or spell correctly, Thanks - Monke")
+	print("An error had occur pls make sure it all lowercase or spell correctly, Thanks")
