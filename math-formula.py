@@ -42,18 +42,18 @@ if cmd_type == "volume":
             sphere(r)
     elif cmd == "cylinder":
         while r > 0:
-	    r = float(input("Enter the radius:\n"))
-	    h = float(input("Enter the height:\n"))
+            r = float(input("Enter the radius:\n"))
+            h = float(input("Enter the height:\n"))
             if r == 0:
                 break
-	        cylinder(r,h)
+            cylinder(r,h)
     elif cmd == "cone":
         while r > 0:
-	    r = float(input("Enter the radius:\n"))
-	    h = float(input("Enter the height:\n"))
+            r = float(input("Enter the radius:\n"))
+            h = float(input("Enter the height:\n"))
             if r == 0:
                 break
-	    cone(r,h)
+            cone(r,h)
 elif cmd_type == "surface area":
     r = 1
     if cmd == "cylinder":
